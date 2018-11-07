@@ -8,7 +8,6 @@
 **Integrantes do grupo:**<br>
 - Ana Carolina Cebin Pereira: <a href="url"> carolcebin@gmail.com </a>
 
-
 ### 2. JUSTIFICATIVA DO SISTEMA<br>
 <P align="justify">&nbsp&nbsp O sistema tem como propósito principal fazer o controle do tempo gasto com realização de atividades durante o expediente de trabalho. Além disso, o mesmo será utilizado como mediador para tomada de decisão estratégicas referentes à organização de atividades no trabalho, uma vez que essa ferramenta terá a capacidade de medir o tempo que está sendo gasto com cada atividade.
  </p>
@@ -25,11 +24,11 @@ com cada categoria de atividades.</p>
 de outros usuários. O sistema deve armazenar os registros de eventos e ser compatível com dispositivos mobile.</p>
 
 ### 4.PROJECT MODEL CANVAS (PMC)<br>
- ![Alt Text](https://github.com/CarolCebin/DailyLog/blob/master/Imagens/.PROJECT%20MODEL%20CANVAS%20(PMC).jpg)
-- [Link Para Acessar o documento no Drive.](https://drive.google.com/open?id=1Rn2uGL4AyojqxlBiWGUDyfspa55MZ79VLvq4QVdpycY)
+ ![Alt Text](https://github.com/CarolCebin/DailyLog/blob/master/Documentos/Imagens/Project%20Model%20Canvas(PMC).jpg)
+ - [Link Para Acessar o documento no Drive.](https://drive.google.com/open?id=1WzzZtVEXUc-Y5H9H4em3yzH0AsP1iaLK)
 
 ### 5.MAPA MENTAL<br>
- ![Alt Text](https://github.com/CarolCebin/DailyLog/blob/master/Imagens/Mapa%20Mental%20do%20Sistema.PNG)
+ ![Alt Text](https://github.com/CarolCebin/DailyLog/blob/master/Documentos/Imagens/Mapa%20Mental%20do%20Sistema.png)
  
 ### 6. TECNOLOGIAS UTILIZADAS<br>
 - **Java:** Implementação do código fonte;
@@ -40,21 +39,21 @@ de outros usuários. O sistema deve armazenar os registros de eventos e ser comp
 - [Link Para Acessar o documento no Drive.](https://drive.google.com/open?id=15EeHTSu6TpxJOVPpxTKpXdgdKLLh4x7XicEWmQWy7Z4)
 
 ### 8. QUADRO KANBAN<br>
--   [Link Para Acessar o quadro no Trello.](https://trello.com/b/KcUYk8bI/dailylog)
+- [Link Para Acessar o quadro no Trello.](https://trello.com/b/KcUYk8bI/dailylog)
 
 ### 9. JavaDoc<br>
 - [Link Para Acessar o JavDoc.](http://dailylogjavadoc.gearhostpreview.com/)
 
 ### 10.PROTÓTIPOS DO SISTEMA(MOCKUPS)<br>
-- [MOCKUP - PERFIL USUARIO](https://github.com/CarolCebin/Daily-Log/blob/master/Documentos/Prot%C3%B3tipos/Daily%20Log%20-%20Perfil%20Usuario%20Comum%20.pdf)
-- [MOCKUP - PERFIL DE CADASTRO](https://github.com/CarolCebin/Daily-Log/blob/master/Documentos/Prot%C3%B3tipos/Daily%20Log%20%20-%20Perfil%20de%20Cadastro.pdf)
-- [MOCKUP - PERFIL ADMINISTRADOR](https://github.com/CarolCebin/Daily-Log/blob/master/Documentos/Prot%C3%B3tipos/Daily%20Log%20-%20Perfil%20Adiministrador.pdf)
+- [MOCKUP - PERFIL USUARIO](https://github.com/CarolCebin/DailyLog/blob/master/Documentos/Prot%C3%B3tipos/Daily%20Log%20-%20Perfil%20Usuario%20Comum%20.pdf)
+- [MOCKUP - PERFIL DE CADASTRO](https://github.com/CarolCebin/DailyLog/blob/master/Documentos/Prot%C3%B3tipos/Daily%20Log%20%20-%20Perfil%20de%20Cadastro.pdf)
+- [MOCKUP - PERFIL ADMINISTRADOR](https://github.com/CarolCebin/DailyLog/blob/master/Documentos/Prot%C3%B3tipos/Daily%20Log%20-%20Perfil%20Adiministrador.pdf)
 
 ### 11. DIAGRAMA DE CLASSES UML<br>
- ![Alt Text](https://github.com/CarolCebin/Daily-Log/blob/master/Imagens/Diagrama%20UML%20Daily%20Log.jpeg?raw=true)
+ ![Alt Text](https://github.com/CarolCebin/DailyLog/blob/master/Documentos/Imagens/Diagrama%20UML.jpeg)
 
 ### 12. MODELO CONCEITUAL <br>
- ![Alt Text](https://github.com/CarolCebin/Daily-Log/blob/master/Imagens/Modelo%20Conceitual%20Daily%20Log.png?raw=true)
+ ![Alt Text](https://github.com/CarolCebin/DailyLog/blob/master/Documentos/Imagens/Modelo%20Conceitual%20DailyLog.png)
  
 
 
