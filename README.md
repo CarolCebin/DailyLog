@@ -6,9 +6,9 @@
 
 ### 1. COMPONENTES<br>
 **Integrantes do grupo:**<br>
--  Ana Carolina Cebin Pereira:<a href="url"> carolcebin@gmail.com </a>
--  Jardielma Queiroz de Lima:<a href="url"> jardielmaqueiroz@hotmail.com </a>
--  Paulo Ricardo Viana Ferreira:<a href="url"> paulo_ricardosf@outlook.com <br></a>
+-   Ana Carolina Cebin Pereira:<a href="url"> carolcebin@gmail.com </a>
+-   Jardielma Queiroz de Lima:<a href="url"> jardielmaqueiroz@hotmail.com </a>
+-   Paulo Ricardo Viana Ferreira:<a href="url"> paulo_ricardosf@outlook.com <br></a>
 
 ### 2. JUSTIFICATIVA DO SISTEMA<br>
 <P align="justify">&nbsp&nbsp O sistema tem como propósito principal fazer o controle do tempo gasto com realização de atividades durante o expediente de trabalho. Além disso, o mesmo será utilizado como mediador para tomada de decisão estratégicas referentes à organização de atividades no trabalho, uma vez que essa ferramenta terá a capacidade de medir o tempo que está sendo gasto com cada atividade.
@@ -33,23 +33,23 @@ de outros usuários. O sistema deve armazenar os registros de eventos e ser comp
  ![Alt Text](https://github.com/CarolCebin/DailyLog/blob/master/Documentos/Imagens/Mapa%20Mental%20do%20Sistema.png)
  
 ### 6. TECNOLOGIAS UTILIZADAS<br>
--  **Java:** Implementação do código fonte;
--  **MySQL:** Implementação de Bando de Dados;
--  **Balsamiq:** Protótipos;
+-   **Java:** Implementação do código fonte;
+-   **MySQL:** Implementação de Bando de Dados;
+-   **Balsamiq:** Protótipos;
 
 ### 7. DIÁRIO DE BORDO<br>
--  [Link Para Acessar o documento no Drive.](https://drive.google.com/open?id=15EeHTSu6TpxJOVPpxTKpXdgdKLLh4x7XicEWmQWy7Z4)
+-   [Link Para Acessar o documento no Drive.](https://drive.google.com/open?id=15EeHTSu6TpxJOVPpxTKpXdgdKLLh4x7XicEWmQWy7Z4)
 
 ### 8. QUADRO KANBAN<br>
--  [Link Para Acessar o quadro no Trello.](https://trello.com/b/KcUYk8bI/dailylog)
+-   [Link Para Acessar o quadro no Trello.](https://trello.com/b/KcUYk8bI/dailylog)
 
 ### 9. JavaDoc<br>
--  [Link Para Acessar o JavDoc.](http://dailylogjavadoc.gearhostpreview.com/)
+-   [Link Para Acessar o JavDoc.](http://dailylogjavadoc.gearhostpreview.com/)
 
 ### 10.PROTÓTIPOS DO SISTEMA(MOCKUPS)<br>
--  [MOCKUP - PERFIL USUARIO](https://github.com/CarolCebin/DailyLog/blob/master/Documentos/Prot%C3%B3tipos/Daily%20Log%20-%20Perfil%20Usuario%20Comum%20.pdf)
--  [MOCKUP - PERFIL DE CADASTRO](https://github.com/CarolCebin/DailyLog/blob/master/Documentos/Prot%C3%B3tipos/Daily%20Log%20%20-%20Perfil%20de%20Cadastro.pdf)
--  [MOCKUP - PERFIL ADMINISTRADOR](https://github.com/CarolCebin/DailyLog/blob/master/Documentos/Prot%C3%B3tipos/Daily%20Log%20-%20Perfil%20Adiministrador.pdf)
+-   [MOCKUP - PERFIL USUARIO](https://github.com/CarolCebin/DailyLog/blob/master/Documentos/Prot%C3%B3tipos/Daily%20Log%20-%20Perfil%20Usuario%20Comum%20.pdf)
+-   [MOCKUP - PERFIL DE CADASTRO](https://github.com/CarolCebin/DailyLog/blob/master/Documentos/Prot%C3%B3tipos/Daily%20Log%20%20-%20Perfil%20de%20Cadastro.pdf)
+-   [MOCKUP - PERFIL ADMINISTRADOR](https://github.com/CarolCebin/DailyLog/blob/master/Documentos/Prot%C3%B3tipos/Daily%20Log%20-%20Perfil%20Adiministrador.pdf)
 
 ### 11. DIAGRAMA DE CLASSES UML<br>
  ![Alt Text](https://github.com/CarolCebin/DailyLog/blob/master/Documentos/Imagens/Diagrama%20UML.jpeg)
