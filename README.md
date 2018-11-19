@@ -27,7 +27,7 @@ de outros usuários. O sistema deve armazenar os registros de eventos e ser comp
 
 ### 4.PROJECT MODEL CANVAS (PMC)<br>
  ![Alt Text](https://github.com/CarolCebin/DailyLog/blob/master/Documentos/Imagens/Project%20Model%20Canvas(PMC).jpg)
- -  [Link Para Acessar o documento no Drive.](https://drive.google.com/open?id=1WzzZtVEXUc-Y5H9H4em3yzH0AsP1iaLK)
+-   [Link Para Acessar o documento no Drive.](https://drive.google.com/open?id=1WzzZtVEXUc-Y5H9H4em3yzH0AsP1iaLK)
 
 ### 5.MAPA MENTAL<br>
  ![Alt Text](https://github.com/CarolCebin/DailyLog/blob/master/Documentos/Imagens/Mapa%20Mental%20do%20Sistema.png)
