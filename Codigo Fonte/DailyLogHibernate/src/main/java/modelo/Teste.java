@@ -8,13 +8,6 @@ public class Teste {
 
 
         genericoImplGenericoDAO conexao = new genericoImplGenericoDAO();
-
-        Categoria cat = new Categoria();
-        cat.setNome("Ana Linda");
-        cat.setCategoriaMae(null);
-
-        conexao.inserir(cat);
-
         conexao.fecharSessao();
 
     }
