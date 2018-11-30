@@ -1,10 +1,7 @@
-package persistencia.DAOImplementacao;
+package persistencia.implementacaoDAO;
 
 
-import persistencia.DAOInterface.DAOGenerico;
-import org.hibernate.Criteria;
-import org.hibernate.Session;
-
+import persistencia.interfaceDAO.GenericoDAO;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -14,11 +11,11 @@ import javax.persistence.criteria.CriteriaQuery;
 import java.util.List;
 
 
-public class DAOGenericoImpl<T> implements DAOGenerico<T> {
-    EntityManagerFactory emf;
-    EntityManager em;
+public class genericoImplGenericoDAO<T> implements GenericoDAO<T> {
+    private EntityManagerFactory emf;
+    private EntityManager em;
 
-    public DAOGenericoImpl() {
+    public genericoImplGenericoDAO() {
         this.emf = Persistence.createEntityManagerFactory("dailyLog");
         this.em = emf.createEntityManager();
     }

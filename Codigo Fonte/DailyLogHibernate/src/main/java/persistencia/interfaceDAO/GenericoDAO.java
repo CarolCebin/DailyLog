@@ -1,8 +1,8 @@
-package persistencia.DAOInterface;
+package persistencia.interfaceDAO;
 
 import java.util.List;
 
-public interface DAOGenerico<T> {
+public interface GenericoDAO<T> {
     public void inserir(T objeto) throws Exception;
     public void alterar(T objeto) throws Exception;
     public void deletar(T objeto) throws Exception;

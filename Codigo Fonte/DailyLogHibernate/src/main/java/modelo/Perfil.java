@@ -1,6 +1,4 @@
-package model;
-
-import net.bytebuddy.agent.builder.AgentBuilder;
+package modelo;
 
 import javax.persistence.*;
 import java.time.LocalTime;
@@ -34,8 +32,6 @@ public class Perfil {
             inverseJoinColumns = { @JoinColumn(name = "fk_permissao") })
     private List<Permissao> permissoes = new ArrayList<Permissao>();
 
-    public Perfil() {
-    }
 
     public List<Permissao> getPermissoes() {
         return permissoes;

@@ -1,7 +1,6 @@
-package model;
+package modelo;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 @Entity
 @Table(name = "permissao")
