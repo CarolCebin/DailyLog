@@ -11,7 +11,7 @@ public class Permissao {
     @Column(name = "id")
     private int id;
 
-    @Column(name = "nome")
+    @Column(name = "nome", nullable = false)
     private String nome;
 
     public int getId() {

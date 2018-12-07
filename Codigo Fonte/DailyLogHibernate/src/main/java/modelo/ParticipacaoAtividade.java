@@ -1,5 +1,7 @@
 package modelo;
 
+import org.hibernate.annotations.Type;
+
 import javax.persistence.*;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
@@ -12,10 +14,8 @@ public class ParticipacaoAtividade {
     @GeneratedValue(strategy = GenerationType.IDENTITY )
     private int id;
 
-    @Column
-    private String titulo;
-    
-    @Column
+    @Lob
+    @Column(name = "descricao", length = 600)
     private String descricao;
     
     @Column
@@ -27,35 +27,20 @@ public class ParticipacaoAtividade {
     @Column(name = "hr_termino")
     private LocalTime horarioTermino;
 
-    @ManyToOne(cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "fk_expediente")
-    private Expediente expediente;
-
-    @ManyToOne(cascade = CascadeType.PERSIST)
+    @ManyToOne
     @JoinColumn(name = "fk_atividade")
     private Atividade atividade;
 
-    public boolean isConfirmado() {
-        return confirmado;
-    }
-    public void setConfirmado(boolean confirmado) {
-        this.confirmado = confirmado;
+    @ManyToOne
+    @JoinColumn(name = "fk_usuario")
+    private Usuario usuario;
+
+    public void setHorarioInicioString(String horario){
+        this.horarioInicio = LocalTime.parse(horario + ":00", DateTimeFormatter.ofPattern("HH:mm:ss"));
     }
 
-    public Expediente getExpediente() {
-        return expediente;
-    }
-
-    public void setExpediente(Expediente expediente) {
-        this.expediente = expediente;
-    }
-
-    public Atividade getAtividade() {
-        return atividade;
-    }
-
-    public void setAtividade(Atividade atividade) {
-        this.atividade = atividade;
+    public void setHorarioTerminoString(String horario){
+        this.horarioTermino = LocalTime.parse(horario + ":00", DateTimeFormatter.ofPattern("HH:mm:ss"));
     }
 
     public int getId() {
@@ -66,14 +51,6 @@ public class ParticipacaoAtividade {
         this.id = id;
     }
 
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
     public String getDescricao() {
         return descricao;
     }
@@ -82,11 +59,11 @@ public class ParticipacaoAtividade {
         this.descricao = descricao;
     }
 
-    public boolean getConfirmado() {
+    public boolean isConfirmado() {
         return confirmado;
     }
 
-    public void setEstadoConfirmacao(boolean confirmado) {
+    public void setConfirmado(boolean confirmado) {
         this.confirmado = confirmado;
     }
 
@@ -98,10 +75,6 @@ public class ParticipacaoAtividade {
         this.horarioInicio = horarioInicio;
     }
 
-    public void setHorarioInicioString(String horario){
-        this.horarioInicio = LocalTime.parse(horario + ":00", DateTimeFormatter.ofPattern("HH:mm:ss"));
-    }
-
     public LocalTime getHorarioTermino() {
         return horarioTermino;
     }
@@ -109,9 +82,19 @@ public class ParticipacaoAtividade {
     public void setHorarioTermino(LocalTime horarioTermino) {
         this.horarioTermino = horarioTermino;
     }
-
-    public void setHorarioTerminoString(String horario){
-        this.horarioTermino = LocalTime.parse(horario + ":00", DateTimeFormatter.ofPattern("HH:mm:ss"));
+    public Atividade getAtividade() {
+        return atividade;
     }
 
+    public void setAtividade(Atividade atividade) {
+        this.atividade = atividade;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
 }

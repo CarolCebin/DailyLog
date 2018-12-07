@@ -1,14 +1,14 @@
 package modelo;
 
 
-import persistencia.implementacaoDAO.genericoImplGenericoDAO;
+import persistencia.dao.CategoriaDAOImpl;
+import persistencia.dao.GenericoDAOImpl;
+
+import java.util.List;
 
 public class Teste {
-    public static void main(String[] args) throws Exception {
-
-
-        genericoImplGenericoDAO conexao = new genericoImplGenericoDAO();
-        conexao.fecharSessao();
-
+    public static void main(String[] args) {
+        GenericoDAOImpl a = new GenericoDAOImpl();
+        a.close();
     }
 }

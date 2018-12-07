@@ -22,7 +22,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "expediente")
-public class Expediente implements Serializable {
+public class Expediente {
 
     /**
      * Atributos e mapeamento
@@ -44,21 +44,6 @@ public class Expediente implements Serializable {
     @JoinColumn(name = "fk_usuario")
     private Usuario usuario;
 
-    @OneToMany(mappedBy = "expediente")
-    private List<ParticipacaoAtividade> atividades = new ArrayList<ParticipacaoAtividade>();
-
-
-
-
-    public List<ParticipacaoAtividade> getAtividades() {
-        return atividades;
-    }
-
-    public void setAtividades(List<ParticipacaoAtividade> atividades) {
-
-        this.atividades = atividades;
-    }
-
     public int getId() {
         return id;
     }
@@ -67,17 +52,12 @@ public class Expediente implements Serializable {
         this.id = id;
     }
 
-
     public LocalDate getData() {
         return data;
     }
 
     public void setData(LocalDate data) {
         this.data = data;
-    }
-
-    public void setDataString(String data){
-        this.data = LocalDate.parse(data, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
     }
 
     public LocalTime getHorarioInicio() {
@@ -103,4 +83,16 @@ public class Expediente implements Serializable {
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
+    public void setDataString(String data){
+        this.data = LocalDate.parse(data, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+    }
+
+    public void setHorarioInicioString(String horario){
+        this.horarioInicio = LocalTime.parse(horario + ":00", DateTimeFormatter.ofPattern("HH:mm:ss"));
+    }
+
+    public void setHorarioTerminoString(String horario){
+        this.horarioTermino = LocalTime.parse(horario + ":00", DateTimeFormatter.ofPattern("HH:mm:ss"));
+    }
+
 }

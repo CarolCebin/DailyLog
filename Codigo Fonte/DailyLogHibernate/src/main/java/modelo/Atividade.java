@@ -1,36 +1,46 @@
 package modelo;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Table(name = "atividade")
 public class Atividade {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY )
     private int id;
+
+    @Column(name = "data", nullable = false)
+    private LocalDate data;
     
-    @Column
+    @Column(name = "titulo", nullable = false)
     private String titulo;
 
-    @ManyToOne(cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "fk_subcategoria")
+    @ManyToOne
+    @JoinColumn(name = "fk_subcategoria", nullable = false)
     private Categoria subCategoria;
-    
-    @Column
+
+    @Lob
+    @Column(name = "descricao", length = 600)
     private String descricao;
     
-    @Column(name = "hr_inicio")
+    @Column(name = "hr_inicio", nullable = false)
     private LocalTime horarioInicio;
     
-    @Column(name = "hr_termino")
+    @Column(name = "hr_termino", nullable = false)
     private LocalTime horarioTermino;
 
-    @OneToMany(mappedBy = "atividade")
-    private List<ParticipacaoAtividade> pessoasParticipantes = new ArrayList<ParticipacaoAtividade>();
+    @ManyToOne
+    @JoinColumn(name = "fk_usuario", nullable = false)
+    private Usuario usuario;
+
+    @OneToMany(mappedBy = "atividade", cascade = CascadeType.ALL)
+    private List<ParticipacaoAtividade> participacoes = new ArrayList<ParticipacaoAtividade>();
 
     public int getId() {
         return id;
@@ -80,20 +90,54 @@ public class Atividade {
         this.horarioTermino = horarioTermino;
     }
 
-    public List<ParticipacaoAtividade> getPessoasParticipantes() {
-        return pessoasParticipantes;
+    public Usuario getUsuario() {
+        return usuario;
     }
 
-    public void setPessoasParticipantes(List<ParticipacaoAtividade> pessoasParticipantes) {
-        this.pessoasParticipantes = pessoasParticipantes;
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 
-    /*
-    public Atividade(String titulo, String descricao, LocalTime horarioInicio, LocalTime horarioTermino) {
-        this.titulo = titulo;
-        this.descricao = descricao;
-        this.horarioInicio = horarioInicio;
-        this.horarioTermino = horarioTermino;
+    public List<ParticipacaoAtividade> getParticipacoes() {
+        return participacoes;
     }
- */
+
+    public void setParticipacoes(List<ParticipacaoAtividade> participacoes) {
+        this.participacoes = participacoes;
+    }
+
+    public void adicionaParticipacoesAtividade(ParticipacaoAtividade participacao){
+        this.participacoes.add(participacao);
+    }
+    public void setHorarioInicioString(String horario){
+        this.horarioInicio = LocalTime.parse(horario + ":00", DateTimeFormatter.ofPattern("HH:mm:ss"));
+    }
+
+    public void setHorarioTerminoString(String horario){
+        this.horarioTermino = LocalTime.parse(horario + ":00", DateTimeFormatter.ofPattern("HH:mm:ss"));
+    }
+
+    public void criaParticipacoesAtividade(List<Usuario> usuarios){
+        for (Usuario usuario: usuarios) {
+            ParticipacaoAtividade participacaoAtividade = new ParticipacaoAtividade();
+            participacaoAtividade.setConfirmado(false);
+            participacaoAtividade.setAtividade(this);
+            participacaoAtividade.setDescricao(this.descricao);
+            participacaoAtividade.setHorarioInicio(this.horarioInicio);
+            participacaoAtividade.setHorarioTermino(this.horarioTermino);
+            participacaoAtividade.setUsuario(usuario);
+            adicionaParticipacoesAtividade(participacaoAtividade);
+        }
+    }
+    public void setDataString(String data){
+        this.data = LocalDate.parse(data, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+    }
+
+    public LocalDate getData() {
+        return data;
+    }
+
+    public void setData(LocalDate data) {
+        this.data = data;
+    }
 }

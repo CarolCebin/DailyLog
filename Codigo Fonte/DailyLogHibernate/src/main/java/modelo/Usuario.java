@@ -13,13 +13,16 @@ public class Usuario {
     @Column(name="id")
     private int id;
 
-    @Column(name = "nome")
+    @Column(name = "nome", nullable = false)
     private String nome;
 
-    @Column(name = "senha")
+    @Column(name = "sobrenome", nullable = false)
+    private String  sobrenome;
+
+    @Column(name = "senha", nullable = false)
     private String senha;
 
-    @Column(name = "login")
+    @Column(name = "login", nullable = false)
     private String login;
 
     @OneToOne(cascade=CascadeType.ALL)
@@ -29,9 +32,13 @@ public class Usuario {
     @OneToMany(mappedBy = "usuario")
     private List<Expediente> expedientes = new ArrayList<Expediente>();
 
+    @OneToMany(mappedBy = "usuario")
+    private List<ParticipacaoAtividade> participacoesAtividade = new ArrayList<ParticipacaoAtividade>();
 
+    @OneToMany(mappedBy = "usuario")
+    private List<Atividade> atividades = new ArrayList<Atividade>();
 
-    public int getId() {
+    public int getId(){
         return id;
     }
 
@@ -77,5 +84,29 @@ public class Usuario {
 
     public void setExpedientes(List<Expediente> expedientes) {
         this.expedientes = expedientes;
+    }
+
+    public String getSobrenome() {
+        return sobrenome;
+    }
+
+    public void setSobrenome(String sobrenome) {
+        this.sobrenome = sobrenome;
+    }
+
+    public List<ParticipacaoAtividade> getParticipacoesAtividade() {
+        return participacoesAtividade;
+    }
+
+    public void setParticipacoesAtividade(List<ParticipacaoAtividade> participacoesAtividade) {
+        this.participacoesAtividade = participacoesAtividade;
+    }
+
+    public List<Atividade> getAtividades() {
+        return atividades;
+    }
+
+    public void setAtividades(List<Atividade> atividades) {
+        this.atividades = atividades;
     }
 }

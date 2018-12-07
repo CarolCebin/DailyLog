@@ -1,26 +1,32 @@
 package modelo;
 
+/**
+ * @author Ana Carolina Cebin Pereira
+ */
+
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
+@Entity(name = "categoria")
 public class Categoria {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column
+    @Column(nullable = false)
     private String nome;
 
-    @OneToMany(mappedBy = "categoria")
+    @OneToMany(mappedBy = "categoriaMae", cascade = CascadeType.ALL)
     private List<Categoria> subCategorias = new ArrayList<Categoria>();
-
 
     @ManyToOne
     @JoinColumn(name = "fk_categoria_mae")
-    private Categoria categoria;
+    private Categoria categoriaMae;
+
+    //Get e Setter padroes
 
     public int getId() {
         return id;
@@ -47,10 +53,35 @@ public class Categoria {
     }
 
     public Categoria getCategoriaMae() {
-        return categoria;
+        return categoriaMae;
     }
 
     public void setCategoriaMae(Categoria categoriaMae) {
-        this.categoria = categoriaMae;
+        this.categoriaMae = categoriaMae;
+    }
+
+    //Funcoes especificas da classe
+
+    /**
+     * Cria a nova subcategoria e insere na lista de subCategorias
+     * @param subCategoria nome da nova SubCategoria
+     *
+     */
+    public void inserirSubCategoria(Categoria subCategoria){
+        this.subCategorias.add(subCategoria);
+    }
+
+    /**
+     * Lista as Subcategorias da categoria
+     */
+    public void listarSubcategorias(){
+        if (!this.subCategorias.isEmpty()){
+            for (Categoria subCategoria: this.subCategorias) {
+                System.out.println("        Numero: " + subCategoria.getId() +"   Nome: "+ subCategoria.getNome());
+            }
+        }
     }
 }
+
+
+

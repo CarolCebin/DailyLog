@@ -26,27 +26,20 @@ public class Perfil {
     @Column(name = "hr_padrao_termino")
     private LocalTime horarioPadraoTermino;
 
-    @ManyToMany
-    @JoinTable(name = "rel_permissao_perfil",
-            joinColumns = { @JoinColumn(name = "fk_perfil") },
-            inverseJoinColumns = { @JoinColumn(name = "fk_permissao") })
-    private List<Permissao> permissoes = new ArrayList<Permissao>();
+    @OneToOne
+    @JoinColumn(name = "fk_permissao")
+    private Permissao permissao;
 
-
-    public List<Permissao> getPermissoes() {
-        return permissoes;
+    public void setHorarioPadraoInicioString(String horario){
+        this.horarioPadraoInicio = LocalTime.parse(horario + ":00", DateTimeFormatter.ofPattern("HH:mm:ss"));
     }
 
-    public void setPermissoes(List<Permissao> permissoes) {
-        this.permissoes = permissoes;
+    public void setHorarioPadraoTerminoString(String horario){
+        this.horarioPadraoTermino = LocalTime.parse(horario + ":00", DateTimeFormatter.ofPattern("HH:mm:ss"));
     }
 
     public int getId() {
         return id;
-    }
-
-    public void adicionarPermissao(Permissao novaPermissao){
-        this.permissoes.add(novaPermissao);
     }
 
     public void setId(int id) {
@@ -85,12 +78,11 @@ public class Perfil {
         this.horarioPadraoTermino = horarioPadraoTermino;
     }
 
-    public void setHorarioPadraoInicioString(String horario){
-        this.horarioPadraoInicio = LocalTime.parse(horario + ":00", DateTimeFormatter.ofPattern("HH:mm:ss"));
+    public Permissao getPermissao() {
+        return permissao;
     }
 
-
-    public void setHorarioPadraoTerminoString(String horario){
-        this.horarioPadraoTermino = LocalTime.parse(horario + ":00", DateTimeFormatter.ofPattern("HH:mm:ss"));
+    public void setPermissao(Permissao permissao) {
+        this.permissao = permissao;
     }
 }

@@ -1,0 +1,17 @@
+persistencia\interfaceDAO\ParticipacaoAtividadeDAO.class
+persistencia\implementacaoDAO\genericoImplGenericoDAO.class
+persistencia\interfaceDAO\CategoriaDAO.class
+persistencia\interfaceDAO\UsuarioDAO.class
+modelo\Categoria.class
+modelo\Permissao.class
+modelo\Teste.class
+persistencia\interfaceDAO\PerfilDAO.class
+modelo\Perfil.class
+persistencia\interfaceDAO\PermissaoDAO.class
+persistencia\interfaceDAO\ExpedienteDAO.class
+persistencia\interfaceDAO\AtividadeDAO.class
+modelo\ParticipacaoAtividade.class
+persistencia\interfaceDAO\GenericoDAO.class
+modelo\Atividade.class
+modelo\Expediente.class
+modelo\Usuario.class
